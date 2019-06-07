@@ -126,8 +126,8 @@ export default class Paste extends Module {
    * @public
    */
   public async prepare(): Promise<void> {
-    this.setCallback();
-    this.processTools();
+    // this.setCallback();
+    // this.processTools();
   }
 
   /**
@@ -219,9 +219,9 @@ export default class Paste extends Module {
    * Set onPaste callback handler
    */
   private setCallback(): void {
-    const {Listeners} = this.Editor;
+    // const {Listeners} = this.Editor;
 
-    Listeners.on(document, 'paste', this.handlePasteEvent);
+    // Listeners.on(document, 'paste', this.handlePasteEvent);
   }
 
   /**
