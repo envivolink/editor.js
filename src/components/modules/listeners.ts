@@ -64,19 +64,21 @@ export default class Listeners extends Module {
     handler: (event: Event) => void,
     options: boolean | AddEventListenerOptions = false,
   ): void {
-    const assignedEventData = {
-      element,
-      eventType,
-      handler,
-      options,
-    };
+    if (eventType === 'resize') {
+      const assignedEventData = {
+        element,
+        eventType,
+        handler,
+        options,
+      };
 
-    const alreadyExist = this.findOne(element, eventType, handler);
+      const alreadyExist = this.findOne(element, eventType, handler);
 
-    if (alreadyExist) { return; }
+      if (alreadyExist) { return; }
 
-    this.allListeners.push(assignedEventData);
-    element.addEventListener(eventType, handler, options);
+      this.allListeners.push(assignedEventData);
+      element.addEventListener(eventType, handler, options);
+    }
   }
 
   /**
