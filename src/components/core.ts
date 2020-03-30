@@ -235,7 +235,7 @@ export default class Core {
    */
   public async start() {
     const modulesToPrepare = [
-      // 'Tools',
+      'Tools',
       'UI',
       'BlockManager',
       // 'Paste',
