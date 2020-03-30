@@ -304,7 +304,7 @@ export default class Tools extends Module {
     /**
      * Configuration to be passed to the Tool's constructor
      */
-    const config = this.toolsSettings[tool][this.apiSettings.CONFIG] || {};
+    const config = (this.toolsSettings.hasOwnProperty(tool) && this.toolsSettings[tool][this.apiSettings.CONFIG]) || {};
 
     // Pass placeholder to initial Block config
     if (tool === this.config.initialBlock && !config.placeholder) {
