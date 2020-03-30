@@ -134,7 +134,7 @@ export default class UI extends Module {
     /**
      * Detect mobile version
      */
-    this.checkIsMobile();
+    // this.checkIsMobile();
 
     /**
      * Make main UI elements
@@ -144,37 +144,37 @@ export default class UI extends Module {
     /**
      * Loader for rendering process
      */
-    this.addLoader();
+    // this.addLoader();
 
     /**
      * Append SVG sprite
      */
-    await this.appendSVGSprite();
+    // await this.appendSVGSprite();
 
     /**
      * Make toolbar
      */
-    await this.Editor.Toolbar.make();
+    // await this.Editor.Toolbar.make();
 
     /**
      * Make the Inline toolbar
      */
-    await this.Editor.InlineToolbar.make();
+    // await this.Editor.InlineToolbar.make();
 
     /**
      * Make the Converter tool holder
      */
-    await this.Editor.ConversionToolbar.make();
+    // await this.Editor.ConversionToolbar.make();
 
     /**
      * Load and append CSS
      */
-    await this.loadStyles();
+    // await this.loadStyles();
 
     /**
      * Bind events for the UI elements
      */
-    await this.bindEvents();
+    // await this.bindEvents();
   }
 
   /**

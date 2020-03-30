@@ -75,25 +75,15 @@ export default class Core {
         await this.init();
         await this.start();
 
-        _.log('I\'m ready! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧', 'log', '', 'color: #E24A75');
-
-        setTimeout(() => {
-          if ((this.configuration as EditorConfig).autofocus) {
-            const {BlockManager, Caret} = this.moduleInstances;
-
-            Caret.setToBlock(BlockManager.blocks[0], Caret.positions.START);
-          }
-
-          /**
+        /**
            * Remove loader, show content
            */
-          this.moduleInstances.UI.removeLoader();
+          // this.moduleInstances.UI.removeLoader();
 
           /**
            * Resolve this.isReady promise
            */
-          onReady();
-        }, 500);
+        onReady();
       })
       .catch((error) => {
         _.log(`Editor.js is not ready because of ${error}`, 'error');
@@ -245,14 +235,14 @@ export default class Core {
    */
   public async start() {
     const modulesToPrepare = [
-      'Tools',
+      // 'Tools',
       'UI',
       'BlockManager',
-      'Paste',
-      'DragNDrop',
+      // 'Paste',
+      // 'DragNDrop',
       'ModificationsObserver',
       'BlockSelection',
-      'RectangleSelection',
+      // 'RectangleSelection',
     ];
 
     await modulesToPrepare.reduce(
