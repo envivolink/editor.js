@@ -181,21 +181,6 @@ export default class BlockManager extends Module {
       get: Blocks.get,
     });
 
-    /** Copy shortcut */
-    Shortcuts.add({
-      name: 'CMD+C',
-      handler: (event) => {
-        BlockEvents.handleCommandC(event);
-      },
-    });
-
-    /** Copy and cut */
-    Shortcuts.add({
-      name: 'CMD+X',
-      handler: (event) => {
-        BlockEvents.handleCommandX(event);
-      },
-    });
   }
 
   /**

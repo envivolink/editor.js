@@ -116,20 +116,14 @@ export default class BlockSelection extends Module {
    * to select all and copy them
    */
   public prepare(): void {
-    const {Shortcuts} = this.Editor;
+    // const {Shortcuts} = this.Editor;
 
     /** Selection shortcut */
-    Shortcuts.add({
+    /*Shortcuts.add({
       name: 'CMD+A',
       handler: (event) => {
         const {BlockManager} = this.Editor;
-        /**
-         * When one page consist of two or more EditorJS instances
-         * Shortcut module tries to handle all events. Thats why Editor's selection works inside the target Editor, but
-         * for others error occurs because nothing to select.
-         *
-         * Prevent such actions if focus is not inside the Editor
-         */
+
         if (!BlockManager.currentBlock) {
           return;
         }
@@ -137,7 +131,7 @@ export default class BlockSelection extends Module {
         this.handleCommandA(event);
       },
     });
-
+*/
     this.selection = new SelectionUtils();
   }
 
